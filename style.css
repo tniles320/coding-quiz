@@ -3,6 +3,7 @@
     font-size: 65%;
 }
 
+/* header spacing score highscore and time at top of page */
 header {
     display: flex;
     flex-direction: row;
@@ -15,6 +16,7 @@ header {
     font-size: 4rem;
 }
 
+/* content container centered on page */
 body {
     display: flex;
     justify-content: center;
@@ -25,12 +27,14 @@ body {
     width: 100vw;
 }
 
+/* text that shows on start button page */
 #start-page {
     text-align: center;
     padding: 20px;
     font-size: 3rem;
 }
 
+/* question container */
 .question {
     font-size: 2rem;
     padding: 40px 50px 20px 50px;
@@ -38,6 +42,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* container for quiz box */
 .container {
     width: 800px;
     max-width: 80%;
@@ -47,6 +52,7 @@ body {
     box-shadow: 0 0 5px 1px;
 }
 
+/* column of answer buttons */
 .btn-column {
     display: flex;
     flex-direction: column;
@@ -56,7 +62,7 @@ body {
     padding-left: 30px;
 }
 
-.answer-btn,
+/* all buttons on page */
 .btn {
     background-color: rgb(95, 63, 95);
     border-radius: 5px;
@@ -68,14 +74,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* change color when button is correct */
 .btn.correct {
     background-color: green;
 }
 
+/* changes color when button is wrong */
 .btn.wrong {
     background-color: rgb(145, 12, 12);
 }
 
+/* button changes when cursor hovers over it */
 .btn:hover,
 .start-btn:hover,
 .next-btn:hover {
@@ -83,6 +92,7 @@ body {
     color: black;
 }
 
+/* start and next buttons container */
 .controls {
     display:flex;
     justify-content: center;
@@ -90,19 +100,35 @@ body {
     padding: 10px;
 }
 
+/* start and next buttons */
 .start-btn, 
 .next-btn {
     font-size: 2.4rem;
     padding: 5px 10px;
 }
 
-#answer-result {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: bold;
-}
-
+/* hides content when class is changed */
 .hide {
     display: none;
 }
 
+/* content changes when screen size decreases */
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 3rem; 
+    }
+
+    .question {
+        padding: 10px;
+        font-size: 1.6rem;
+    }
+
+    .btn-column {
+        padding: 10px;
+        width: 80%;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+    }
+  }
